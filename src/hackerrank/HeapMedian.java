@@ -20,59 +20,6 @@ import java.util.regex.*;
 
 public class HeapMedian {
     
-    public static int left(int index)
-    {
-        return index * 2;
-    }
-    
-    public static int right(int index)
-    {
-        return index * 2 + 1;
-    }
-    
-    public static int parent(int index)
-    {
-        return index / 2;
-    }
-    
-    public static void add(int[] array, int lastIndex, int num)
-    {
-        array[lastIndex] = num;
-    }
-    
-    
-    public static void heapifyMax(int[] array, int lastIndex)
-    {
-        int parentIndex = parent(lastIndex);
-        if(parentIndex >= 1)
-        {
-            if(array[lastIndex] > array[parentIndex])
-            {
-                int temp = array[lastIndex];
-                array[lastIndex] = array[parentIndex];
-                array[parentIndex] = temp;
-                heapifyMax(array, parentIndex);
-            }
-        }
-    }
-    
-    public static void heapifyMin(int[] array, int lastIndex)
-    {
-        int parentIndex = parent(lastIndex);
-        if(parentIndex >= 1)
-        {
-            if(array[lastIndex] < array[parentIndex])
-            {
-                int temp = array[lastIndex];
-                array[lastIndex] = array[parentIndex];
-                array[parentIndex] = temp;
-                heapifyMin(array, parentIndex);
-            }
-        }
-    }
-    
-    
-    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();

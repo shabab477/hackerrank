@@ -17,7 +17,7 @@ public class TwoStacks {
         Stack<T> stackNewestOnTop = new Stack<T>();
         Stack<T> stackOldestOnTop = new Stack<T>();
 
-        public void enqueue(T value) { // Push onto newest stack
+        public void enqueue(T value) { 
             stackNewestOnTop.push(value);
             
         }
